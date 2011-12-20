@@ -23,6 +23,7 @@ task :install do
   end
 end
 
+desc "install vendor packages - Janus, RVM"
 task :vendor do
   # Janus
   %x{curl https://raw.github.com/carlhuda/janus/master/bootstrap.sh -o - | sh}
