@@ -16,10 +16,8 @@ task :install do
       file = file.gsub(/\.erb$/, '.local')
       destination_file = file.gsub(/\.local$/, '')
       File.open(file, 'w') { |new_file| new_file.write content }
-      puts "#{file} #{destination_file}"
       link_file file, destination_file
     else
-      puts "#{file}"
       link_file file
     end
   end
