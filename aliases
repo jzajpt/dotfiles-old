@@ -1,0 +1,9 @@
+# Git
+alias g="git"
+
+# Bundler
+alias be="bundle exec"
+alias bake="bundle exec rake"
+
+# Rails
+alias r="script/rails"
