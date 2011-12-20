@@ -8,6 +8,6 @@ PS1="\u@\h:\w \$(parse_git_branch) $ "
 export BUNDLER_EDITOR=mate
 
 # RVM if present
-[[ -s "/Users/jz/.rvm/scripts/rvm" ]] && source "/Users/jz/.rvm/scripts/rvm"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 source ~/.aliases

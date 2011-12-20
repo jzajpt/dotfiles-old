@@ -5,7 +5,7 @@ task :default => :install
 desc "install the dot files into user's home directory"
 task :install do
   files = Dir['*'] - %w(Rakefile README.md)
-  files.reject! { |file| file.match(/.local$/) }
+  files.reject! { |file| file.match(/.mylocal$/) }
   home = ENV['HOME']
   files.each do |file|
     destination = File.join home, ".#{file}"
@@ -13,14 +13,21 @@ task :install do
 
     if file.match(/\.erb$/)
       content = ERB.new(File.read(file)).result(binding)
-      file = file.gsub(/\.erb$/, '.local')
-      destination_file = file.gsub(/\.local$/, '')
+      file = file.gsub(/\.erb$/, '.mylocal')
+      destination_file = file.gsub(/\.mylocal$/, '')
       File.open(file, 'w') { |new_file| new_file.write content }
       link_file file, destination_file
     else
       link_file file
     end
   end
+end
+
+task :vendor do
+  # Janus
+  %x{curl https://raw.github.com/carlhuda/janus/master/bootstrap.sh -o - | sh}
+  # RVM
+  %x{bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)}
 end
 
 def link_file file, destination_file = nil
