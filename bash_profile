@@ -10,4 +10,7 @@ export BUNDLER_EDITOR=mate
 # RVM if present
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+# Macports if present
+[[ -d "/opt/local" ]] && export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+
 source ~/.aliases
