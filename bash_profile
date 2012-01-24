@@ -4,7 +4,8 @@ parse_git_branch() {
 }
 PS1="\u@\h:\w \$(parse_git_branch) $ "
 
-# Bundler editor
+# Editor
+export EDITOR=vim
 export BUNDLER_EDITOR=mate
 
 # RVM if present
