@@ -28,7 +28,7 @@ function define_vim_wrappers()
     fi
   done
 }
-define_vim_wrappers
+# define_vim_wrappers
 
 # Macports if present
 [[ -d "/opt/local" ]] && export PATH=/opt/local/bin:/opt/local/sbin:$PATH

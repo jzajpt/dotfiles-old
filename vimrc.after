@@ -1,8 +1,0 @@
-" No unecessary whitespaces
-autocmd BufWritePre *.rb :%s/\s\+$//e
-autocmd BufWritePre *.js :%s/\s\+$//e
-autocmd BufWritePre *.coffee :%s/\s\+$//e
-autocmd BufWritePre *.feature :%s/\s\+$//e
-
-" I want my NERDtree on the right
-let g:NERDTreeWinPos = "right"
