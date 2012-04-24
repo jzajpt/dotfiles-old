@@ -47,15 +47,18 @@ map <leader>et :tabe %%
 
 map <leader>t :tabnew<cr>
 
-map <Leader>gac :Gcommit -m -a ""<LEFT>
+map <Leader>gac :Gcommit - -m ""<LEFT>
 map <Leader>gc :Gcommit -m ""<LEFT>
 map <leader>gs :Gstatus<cr>
 
 imap <c-e> <c-o>$
 imap <c-a> <c-o>^
 
+map <leader>n :NERDTreeToggle<cr>
+
 " No unecessary whitespaces
 autocmd BufWritePre *.rb :%s/\s\+$//e
+autocmd BufWritePre *.erb :%s/\s\+$//e
 autocmd BufWritePre *.js :%s/\s\+$//e
 autocmd BufWritePre *.css :%s/\s\+$//e
 autocmd BufWritePre *.scss :%s/\s\+$//e

@@ -1,5 +1,5 @@
 color sienna
-set gfn=Monaco:h12
+set gfn=Menlo:h12
 
 " Hide toolbar
 set guioptions-=T
