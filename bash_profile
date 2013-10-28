@@ -8,8 +8,8 @@ PS1="\u@\h:\w \$(parse_git_branch) $ "
 export EDITOR=vim
 export BUNDLER_EDITOR=mate
 
-# RVM if present
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+# RBENV
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Define Vim wrappers which unsets GEM_HOME and GEM_PATH before
 # invoking vim and all known aliases
@@ -30,7 +30,11 @@ function define_vim_wrappers()
 }
 # define_vim_wrappers
 
-# Macports if present
-[[ -d "/opt/local" ]] && export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-
 source ~/.aliases
+
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+
+export PGHOST=localhost
+
