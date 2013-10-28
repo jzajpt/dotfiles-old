@@ -1,5 +1,6 @@
 # Git
 alias g="git"
+alias gc="git commit"
 
 # Bundler
 alias be="bundle exec"
@@ -7,3 +8,7 @@ alias bake="bundle exec rake"
 
 # Rails
 alias r="script/rails"
+
+# LS
+alias ls='ls -G'
+
