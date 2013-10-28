@@ -16,11 +16,13 @@ alias r="script/rails"
 alias s="rspec"
 alias rk="rake"
 
-# LS
-alias ls='ls -G'
-
 # The silver searcher instead of Ack
 alias ack="ag"
+
+# General
+alias mkdir='mkdir -p'
+alias ls='ls -G'
+alias tlf="tail -f"
 
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
