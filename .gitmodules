@@ -1,3 +1,0 @@
-[submodule "janus/abolish"]
-	path = janus/abolish
-	url = https://github.com/tpope/vim-abolish.git
