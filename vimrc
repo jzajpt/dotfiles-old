@@ -47,8 +47,8 @@ map <leader>et :tabe %%
 
 map <leader>t :tabnew<cr>
 
-map <Leader>gac :Gcommit - -m ""<LEFT>
-map <Leader>gc :Gcommit -m ""<LEFT>
+map <Leader>gac :Gcommit -a -m ""<LEFT>
+map <Leader>gc :Gcommit -a<cr>
 map <leader>gs :Gstatus<cr>
 
 imap <c-e> <c-o>$
@@ -64,6 +64,8 @@ autocmd BufWritePre *.css :%s/\s\+$//e
 autocmd BufWritePre *.scss :%s/\s\+$//e
 autocmd BufWritePre *.coffee :%s/\s\+$//e
 autocmd BufWritePre *.feature :%s/\s\+$//e
+autocmd BufWritePre *.handlebars :%s/\s\+$//e
+autocmd BufWritePre *.hbs :%s/\s\+$//e
 
 " I want my NERDtree on the right
 let g:NERDTreeWinPos = "right"
@@ -73,4 +75,21 @@ let g:ctrlp_custom_ignore = {
     \ 'dir':  '\.git$\|\.hg$\|\.svn$',
     \ 'file': '\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\',
     \ }
+
+" Typos
+command W w
+command Q q
+command Wq wq
+command WQ wq
+
+" Syntax highlight
+au BufRead,BufNewFile *.rabl,*.json_builder,*.assetfile,Rakefile,Assetfile,Guardfile set ft=ruby
+
+" CtrlP config
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " Linux/MacOSX
+
+"Copy and paste between different Vim sessions
+nmap <Leader>Y :!echo ""> ~/.vi_tmp<CR><CR>:w! ~/.vi_tmp<CR>
+vmap <Leader>Y :w! ~/.vi_tmp<CR>
+nmap <Leader>P :r ~/.vi_tmp<CR>
 
