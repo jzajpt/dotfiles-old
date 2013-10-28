@@ -23,14 +23,6 @@ task :install do
   end
 end
 
-desc "install vendor packages - Janus, RVM"
-task :vendor do
-  # Janus
-  %x{curl https://raw.github.com/carlhuda/janus/master/bootstrap.sh -o - | sh}
-  # RVM
-  %x{bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)}
-end
-
 def link_file file, destination_file = nil
   destination_file ||= file
   %x{ln -s "$PWD/#{file}" "$HOME/.#{destination_file}"}
