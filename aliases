@@ -12,3 +12,5 @@ alias r="script/rails"
 # LS
 alias ls='ls -G'
 
+# The silver searcher instead of Ack
+alias ack="ag"
