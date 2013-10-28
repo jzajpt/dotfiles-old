@@ -37,3 +37,6 @@
 [submodule "vim/bundle/vim-mustache"]
 	path = vim/bundle/vim-mustache
 	url = https://github.com/mustache/vim-mode.git
+[submodule "vim/bundle/vim-ag"]
+	path = vim/bundle/vim-ag
+	url = https://github.com/rking/ag.vim.git
