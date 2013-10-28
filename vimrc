@@ -12,6 +12,8 @@ syntax enable
 set encoding=utf-8
 set title
 set list
+set autowrite     " Automatically :write before running commands
+set laststatus=2  " Always display the status line
 
 " Don't clutter my dirs up with swp and tmp files
 set backupdir=~/.tmp
