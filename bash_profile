@@ -38,3 +38,5 @@ fi
 
 export PGHOST=localhost
 
+# Path
+export PATH=/usr/local/bin:$HOME/.rbenv/shims:/usr/bin:/bin:/usr/sbin:/sbin
