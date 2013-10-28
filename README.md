@@ -2,8 +2,10 @@
 
 ## Installation
 
-    git clone git://github.com/ryanb/dotfiles ~/.dotfiles
-    cd ~/.dotfiles
-    rake install
+```shell
+git clone git://github.com/jzajpt/dotfiles ~/.dotfiles
+cd ~/.dotfiles
+rake install
+```
 
 
