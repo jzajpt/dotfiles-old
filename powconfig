@@ -1,0 +1,4 @@
+export NEWRELIC_DISPATCHER=pow
+export POW_WORKERS=1
+export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
+
